@@ -1,0 +1,5 @@
+Plate	Wells
+p_21	A1 H1
+p_24	D12
+p_31	G1 G2
+p_39	G2 F11
