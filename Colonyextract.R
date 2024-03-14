@@ -66,11 +66,11 @@ for(i in 1:dim(Data)[1]){
   
   
   
-  if( length(temp1) > 5){
+  if( length(temp1) > 2){
     png(paste0("Colonyextract/",Data$Plate[i],"colonies.png"), width=118*ceiling(sqrt(length(temp1))), height = 118*ceiling(sqrt(length(temp1))), units = "px" )
-    par(mfrow = c(ceiling(sqrt(length(temp1))),ceiling(sqrt(length(temp1)))),mar = c(1,0.1,1,0.1))
+    par(mfrow = c(ceiling(sqrt(length(temp1))),ceiling(sqrt(length(temp1)))),mar = c(1,0.1,2,0.1))
   } else {
-    png(paste0("Colonyextract/",Data$Plate[i],"colonies.png"), width=118*length(temp1), height = 118*length(temp1) )
+    png(paste0("Colonyextract/",Data$Plate[i],"colonies.png"), width=(118*length(temp1)), height = (118*length(temp1)) )
     par(mfrow = c(1,length(temp1)),mar = c(1,0.1,1,0.1))
     
   }
@@ -81,7 +81,7 @@ for(i in 1:dim(Data)[1]){
     
     plot(Colextract(temp[2],as.integer(strsplit(temp[1],"[:alpha:]")[[1]][2]),"sadasde"))
 
-    mtext(temp1[[j]])
+    mtext(temp1[[j]],line= 0)
   }
   dev.off()
   
