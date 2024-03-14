@@ -1,6 +1,6 @@
 
 #setwd()
-setwd(paste0(getwd(),"/run2"))
+# setwd(paste0(getwd(),"/run2"))
 
 library(readr)
 
