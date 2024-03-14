@@ -35,21 +35,23 @@ source(paste0(Usedir,"/Saltyfunctions.R"))
 #   Reportd <- c(Reportd, paste0(gsub("_","",Data$Plate)[i],"_", strsplit(Data$Wells," ")[[i]]))
 # 
 # }
-#rough estimate of array dimensions for plotting
-# ceiling( sqrt( length(Reportd) ))*floor( sqrt(length(Reportd)) )
-#
-#plots all colonies from outcome1 colonies, no labels.
-#
+# ## rough estimate of array dimensions for plotting
+# ## ceiling( sqrt( length(Reportd) ))*floor( sqrt(length(Reportd)) )
+# # 
+# ## plots all colonies from outcome1 colonies, no labels.
+# # 
+# png("Colonyextract/Allcolonies.png",width = 13*100, height = 13*100)
 # par(mfrow = c(ceiling( sqrt( length(Reportd) )),floor( sqrt( length(Reportd) ))),mar = c(0.1,0.1,0.1,0.1))
 # 
 # for(i in 1:length(Reportd)){
-#   
+# 
 #   temp <- strsplit(Reportd[i],"_")[[1]]
-#   
+# 
 #   plot(Colextract(temp[2],as.integer(strsplit(temp[1],"[:alpha:]")[[1]][2]),"sadasde"))
-#   
-#   
+# 
+# 
 # }
+# dev.off()
 #############
 
 
